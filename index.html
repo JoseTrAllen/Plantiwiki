@@ -2,11 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link
+      rel="shortcut icon"
+      href="./public/assets/favicon.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PlantiWiki</title>
   </head>
   <body>
+  <!--  <div
+      id="construction-modal"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 50%;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      "
+    >
+      <div>
+        <h1>Sitio en Construcción</h1>
+        <p>Estamos trabajando para mejorar tu experiencia 🌱</p>
+      </div> -->
+    </div>
     <header>
       <div class="header">
         <img
@@ -36,7 +62,7 @@
         /></a>
         <a href="#info-plantiwiki">Qué es PlantiWiki</a>
         <a href="#device">android / ios</a>
-        <a href="/userRegister.html">Prueba</a>
+        <a href="/userRegister.html">Regístrate</a>
         <div class="form-menu-container">
           <form class="login-form-menu">
             <p>Acceso</p>
@@ -46,6 +72,7 @@
               type="password"
               placeholder="Contraseña"
             />
+            <p id="user-error"></p>
             <button id="login-button-menu">Acceder</button>
           </form>
         </div>
@@ -167,8 +194,8 @@
     </section>
     <footer>
       <div class="footer-links">
-        <a href="/privacy-policy.html">Política de Privacidad</a>
-        <a href="/terms-and-conditions.html">Términos y Condiciones</a>
+        <a href="/privacyPolicy.html">Política de Privacidad</a>
+        <a href="/terms.html">Términos y Condiciones</a>
         <a href="/about-us.html">Sobre Nosotros</a>
         <a href="/contact.html">Contacto</a>
       </div>

@@ -132,6 +132,23 @@ a {
   color: white;
 }
 
+#login-button-menu {
+  cursor: pointer;
+}
+
+#login-button-menu:hover {
+  transform: scale(1.1);
+}
+
+#login-button-menu:active {
+  transform: scale(0.9);
+}
+
+#user-error {
+  color: #ff2e2e;
+  font-size: 0.9rem;
+}
+
 .background-section {
   display: flex;
   flex-direction: column;
@@ -181,7 +198,7 @@ a {
 .cards-section {
   text-align: center;
   padding: 40px 0px;
-  background: url(assets/section4background.jpg);
+  background: url(/public/assets/section4background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -413,6 +430,10 @@ footer {
   flex-wrap: wrap;
   gap: 25px;
   cursor: pointer;
+}
+
+.footer-links a:hover {
+  color: black;
 }
 
 .footer-info {

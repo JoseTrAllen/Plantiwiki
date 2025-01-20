@@ -1,5 +1,6 @@
 import { fetchUsers } from "../api/usersApi.ts";
 import { User } from "../model/model.ts";
+import { isNotValidUser } from "./verifyUserUi.ts";
 
 export const verifyUser = async (user: string, password: string) => {
   const users: User[] = await fetchUsers();
@@ -13,8 +14,7 @@ export const verifyUser = async (user: string, password: string) => {
 
     window.location.href = `/userProfile.html?username=${isValid.username}`;
   } else {
-    console.log(user, password);
-
-    console.log("Usuario o contraseña incorrecta");
+    isNotValidUser();
+    console.error("Usuario o contraseña incorrecta");
   }
 };

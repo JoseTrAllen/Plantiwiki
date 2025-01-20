@@ -7,8 +7,6 @@ export const fetchUsers = async (): Promise<User[]> => {
     const response = await fetch(usersApi);
     const data = await response.json();
     const users = data[0].users;
-    console.log(users);
-
     return users;
   } catch (error) {
     throw new Error("Algo ha salido mal");

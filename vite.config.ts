@@ -7,6 +7,8 @@ export default defineConfig({
         main: "index.html",
         userRegister: "userRegister.html",
         userProfile: "userProfile.html",
+        privacyPolicy: "privacyPolicy.html",
+        terms: "terms.html",
       },
     },
   },
