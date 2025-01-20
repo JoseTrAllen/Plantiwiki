@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Oxygen:wght@300;400;700&display=swap");
+
+:root {
+  --color-1: #97b280;
+  --color-2: #062309;
+  --color-3: #153c2b;
+  /* Los colores 4 y 5 son degradados de una misma card*/
+  --color-4: #1a4327;
+  --color-5: #1a4028;
+  /* Los colores 6 y 7 son degradados de una misma card*/
+  --color-6: #bde1ae;
+  --color-7: #badbab;
+  /* Los colores 8 y 9 son degradados de una misma card*/
+  --color-8: #658c63;
+  --color-9: #396341;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Funnel Display", sans-serif;
+}
+
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100dvw;
+  height: 100dvh;
+  padding: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(57, 99, 65, 1) 100%
+  );
+  /* background-image: url(../../assets/section2Background.jpeg); */
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(21, 60, 43, 0.547); */
+}
+
+.x {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px 40px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(21, 60, 43, 0.547);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.logo {
+  width: 270px;
+}
+
+h2 {
+  color: white;
+  padding: 5px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  padding: 20px 40px;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+#login-button {
+  padding: 5px 20px;
+  background-color: #97b280;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.create-account {
+  height: 292.8px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 40px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(21, 60, 43, 0.817);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.create-account h2 {
+  font-size: 2rem;
+  text-align: center;
+
+  color: white;
+}
+
+.create-account h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: overline;
+  color: white;
+}
+
+.create-account p {
+  color: white;
+  text-align: center;
+}
+
+#create-account-button {
+  padding: 5px 20px;
+  width: 200px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  color: #1a4327;
+}
+
+@media (max-width: 985px) {
+  .login-section {
+    flex-direction: column;
+  }
+  .login-form {
+    max-width: 500px;
+    height: auto;
+  }
+  .create-account {
+    width: auto;
+    height: auto;
+  }
+}
