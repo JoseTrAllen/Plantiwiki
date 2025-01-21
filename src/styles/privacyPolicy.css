@@ -27,6 +27,9 @@ body {
     rgba(255, 255, 255, 1) 0%,
     rgba(57, 99, 65, 1) 100%
   );
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
 
 .header {
@@ -162,9 +165,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(rgba(1, 0, 0, 0), rgba(0, 0, 0, 1));
-  gap: 20px;
-  padding: 50px 0px;
+  padding: 30px 0px;
 }
 
 .footer-links {
