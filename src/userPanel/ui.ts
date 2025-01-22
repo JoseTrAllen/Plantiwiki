@@ -1,20 +1,16 @@
 import { SavedPlant, User, Plant } from "../model/model";
 
 export const displayUserPhotoProfile = (img: User) => {
-  const newImg = document.createElement("img");
-  const div = document.getElementById("user-container");
-  if (div && div instanceof HTMLDivElement) {
-    newImg.src = img.photo;
-    div.appendChild(newImg);
+  const imgProfile = document.getElementById("img-profile");
+  if (imgProfile && imgProfile instanceof HTMLImageElement) {
+    imgProfile.src = img.photo;
   }
 };
 
-export const displayUserName = (name: User) => {
-  const newHeader = document.createElement("h2");
-  const div = document.getElementById("user-container");
-  if (div && div instanceof HTMLDivElement) {
-    newHeader.innerText = name.username;
-    div.appendChild(newHeader);
+export const displayUserName = (user: User) => {
+  const userName = document.getElementById("user-name");
+  if (userName && userName instanceof HTMLHeadingElement) {
+    userName.innerText = `¡Hola ${user.username}!`;
   }
 };
 
@@ -48,11 +44,12 @@ export const displayUserPlants = (
   allPlants: Plant[],
   userPlant: SavedPlant[]
 ) => {
-  userPlant.forEach((u) => {
-    allPlants.forEach((plant) => {
-      if (u.plantId === plant.id) {
-        console.log(u.nickname, ".", u.customNotes, plant.description);
-      }
-    });
+  userPlant.forEach((userPlant) => {
+    const matchingPlant = allPlants.find(
+      (plant) => userPlant.plantId === plant.id
+    );
+    if (matchingPlant) {
+      console.log(userPlant.nickname, ".", userPlant.customNotes);
+    }
   });
 };

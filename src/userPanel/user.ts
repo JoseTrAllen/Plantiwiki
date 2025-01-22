@@ -2,7 +2,6 @@ import {
   displayUserName,
   displayUserPhotoProfile,
   displayUserNamePlants,
-  displayPlantInformation,
   displayUserPlants,
 } from "./ui";
 import { fetchUsers } from "../api/usersApi";
@@ -26,7 +25,6 @@ const loadUserData = async () => {
         displayUserPhotoProfile(user);
         displayUserName(user);
         displayUserNamePlants(user.savedPlants);
-        displayPlantInformation(plants);
         displayUserPlants(plants, user.savedPlants);
       }
     } catch (e) {

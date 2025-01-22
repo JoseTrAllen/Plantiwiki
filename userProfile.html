@@ -3,12 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User Profile</title>
+    <link rel="stylesheet" href="src/userPanel/userPanel.css" />
+    <link
+      rel="shortcut icon"
+      href="public/assets/favicon.png"
+      type="image/x-icon"
+    />
+    <title>Panel de usuari@</title>
   </head>
   <body>
-    <section class="user-section">
-      <div id="user-container"></div>
-    </section>
+    <header class="nav-header">
+      <nav class="header-nav">
+        <img src="public/assets/logoPlantiwiki.png" alt="" srcset="" />
+        <ul>
+          <li><a href="">Salir</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="img-profile-section">
+        <img id="img-profile" alt="foto de usuario" />
+      </section>
+      <section class="panel-section">
+        <div><h2 id="user-name"></h2></div>
+        <div>
+          <ul class="ul-profile-nav">
+            <li><a href="">Mis Plantas</a></li>
+            <li><a href="">Buscar</a></li>
+          </ul>
+        </div>
+      </section>
+      <!-- <nav class="profile-nav">
+        <h2 id="user-name"></h2>
+        <ul class="ul-profile-nav">
+          <li><a href="">Mis Plantas</a></li>
+          <li><a href="">Buscar</a></li>
+        </ul>
+      </nav> -->
+    </main>
     <script type="module" src="./src/userPanel/user.ts"></script>
   </body>
 </html>
