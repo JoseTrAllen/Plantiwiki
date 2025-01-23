@@ -3,9 +3,11 @@ import {
   displayUserPhotoProfile,
   displayUserNamePlants,
   displayUserPlants,
+  displayTips,
 } from "./ui";
 import { fetchUsers } from "../api/usersApi";
 import { fetchPlants } from "../api/plantsApi";
+import { tip } from "./tips";
 
 const getUserFromURL = () => {
   const params = new URLSearchParams(window.location.search);
@@ -24,6 +26,7 @@ const loadUserData = async () => {
       if (user) {
         displayUserPhotoProfile(user);
         displayUserName(user);
+        displayTips(tip);
         displayUserNamePlants(user.savedPlants);
         displayUserPlants(plants, user.savedPlants);
       }

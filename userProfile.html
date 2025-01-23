@@ -25,7 +25,10 @@
         <img id="img-profile" alt="foto de usuario" />
       </section>
       <section class="panel-section">
-        <div><h2 id="user-name"></h2></div>
+        <div class="name-tip-flex">
+          <h2 id="user-name"></h2>
+          <p id="tip"></p>
+        </div>
         <div>
           <ul class="ul-profile-nav">
             <li><a href="">Mis Plantas</a></li>
@@ -33,13 +36,7 @@
           </ul>
         </div>
       </section>
-      <!-- <nav class="profile-nav">
-        <h2 id="user-name"></h2>
-        <ul class="ul-profile-nav">
-          <li><a href="">Mis Plantas</a></li>
-          <li><a href="">Buscar</a></li>
-        </ul>
-      </nav> -->
+      <section id="plants-user-section"></section>
     </main>
     <script type="module" src="./src/userPanel/user.ts"></script>
   </body>

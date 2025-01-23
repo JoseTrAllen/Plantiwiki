@@ -14,6 +14,17 @@ export const displayUserName = (user: User) => {
   }
 };
 
+export const displayTips = (text: string) => {
+  const tip = document.getElementById("tip");
+  if (
+    tip !== null &&
+    tip !== undefined &&
+    tip instanceof HTMLParagraphElement
+  ) {
+    tip.innerText = `🌱PlantiConsejo🌱 ${text}`;
+  }
+};
+
 export const displayUserNamePlants = (plants: SavedPlant[]) => {
   const div = document.getElementById("user-container");
 
@@ -40,16 +51,78 @@ export const displayPlantInformation = (allPlants: Plant[]) => {
   });
 };
 
+const createCard = () => {
+  const card = document.createElement("div");
+  card.classList.add("card-plant");
+  return card;
+};
+
+const createImg = (text: string, card: HTMLDivElement) => {
+  const img = document.createElement("img");
+  img.classList.add("card-img");
+  img.src = text;
+  card.appendChild(img);
+  return img;
+};
+
+const createTitle = (text: string, card: HTMLDivElement) => {
+  const title = document.createElement("h2");
+  title.classList.add("plant-name");
+  title.innerText = text;
+  card.appendChild(title);
+  return title;
+};
+
+const createSubTitle = (text: string, card: HTMLDivElement) => {
+  const subTitle = document.createElement("p");
+  subTitle.classList.add("plant-cientific-name");
+  subTitle.innerText = text;
+  card.appendChild(subTitle);
+  return subTitle;
+};
+
+const createLastWattered = (text: string, card: HTMLDivElement) => {
+  const info = document.createElement("p");
+  info.classList.add("plant-cientific-name");
+  info.innerText = `Último riego: ${text}`;
+  card.appendChild(info);
+  return info;
+};
+
+const createLastRepotted = (text: string, card: HTMLDivElement) => {
+  const info = document.createElement("p");
+  info.classList.add("plant-cientific-name");
+  info.innerText = `Último transplante: ${text}`;
+  card.appendChild(info);
+  return info;
+};
+
+const createDivImg = () => {
+  const div = document.createElement("div");
+  div.classList.add("img-plant-container");
+  return div;
+};
+
 export const displayUserPlants = (
   allPlants: Plant[],
   userPlant: SavedPlant[]
 ) => {
+  const div = document.getElementById("plants-user-section");
   userPlant.forEach((userPlant) => {
+    const card = createCard();
+    const divImg = createDivImg();
+    div?.appendChild(card);
+    card.appendChild(divImg);
+
     const matchingPlant = allPlants.find(
       (plant) => userPlant.plantId === plant.id
     );
     if (matchingPlant) {
-      console.log(userPlant.nickname, ".", userPlant.customNotes);
+      createImg(matchingPlant.imageUrl, divImg);
+      createTitle(userPlant.nickname, card);
+      createSubTitle(matchingPlant.name, card);
+      createLastWattered(userPlant.lastWatered, card);
+      createLastRepotted(userPlant.lastRepotted, card);
     }
   });
 };
