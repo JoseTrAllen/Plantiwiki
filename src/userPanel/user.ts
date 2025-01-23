@@ -8,6 +8,7 @@ import {
 import { fetchUsers } from "../api/usersApi";
 import { fetchPlants } from "../api/plantsApi";
 import { tip } from "./tips";
+import { getIdCard } from "./toogle";
 
 const getUserFromURL = () => {
   const params = new URLSearchParams(window.location.search);
@@ -29,6 +30,7 @@ const loadUserData = async () => {
         displayTips(tip);
         displayUserNamePlants(user.savedPlants);
         displayUserPlants(plants, user.savedPlants);
+        getIdCard(plants);
       }
     } catch (e) {
       console.log(e);

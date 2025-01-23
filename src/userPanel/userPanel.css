@@ -137,6 +137,7 @@ section {
   padding: 10px 20px;
   border-radius: 16px;
   min-width: 350px;
+  cursor: pointer;
 }
 
 .img-plant-container {
@@ -148,4 +149,40 @@ section {
 .card-plant img {
   width: 150px;
   border-radius: 8px;
+}
+
+/* Toogle section */
+
+.toogle-card {
+  background-color: #06230992;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100dvw;
+  height: 100dvh;
+  position: fixed;
+  z-index: 1;
+}
+
+.modal-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  background-color: #153c2b;
+  z-index: 1;
+  padding: 20px;
+  min-width: 500px;
+  border-radius: 16px;
+}
+
+.img-toogle-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-modal {
+  width: 300px;
+  border-radius: 16px;
 }

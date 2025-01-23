@@ -51,9 +51,10 @@ export const displayPlantInformation = (allPlants: Plant[]) => {
   });
 };
 
-const createCard = () => {
+const createCard = (id: number) => {
   const card = document.createElement("div");
   card.classList.add("card-plant");
+  card.setAttribute("data-id", `${id}`);
   return card;
 };
 
@@ -109,7 +110,7 @@ export const displayUserPlants = (
 ) => {
   const div = document.getElementById("plants-user-section");
   userPlant.forEach((userPlant) => {
-    const card = createCard();
+    const card = createCard(userPlant.plantId);
     const divImg = createDivImg();
     div?.appendChild(card);
     card.appendChild(divImg);
