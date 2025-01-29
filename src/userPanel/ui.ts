@@ -21,7 +21,7 @@ export const displayTips = (text: string) => {
     tip !== undefined &&
     tip instanceof HTMLParagraphElement
   ) {
-    tip.innerText = `🌱PlantiConsejo🌱 ${text}`;
+    tip.innerHTML = `🌱PlantiConsejo🌱<br> ${text}`;
   }
 };
 
@@ -74,18 +74,10 @@ const createTitle = (text: string, card: HTMLDivElement) => {
   return title;
 };
 
-const createSubTitle = (text: string, card: HTMLDivElement) => {
-  const subTitle = document.createElement("p");
-  subTitle.classList.add("plant-cientific-name");
-  subTitle.innerText = text;
-  card.appendChild(subTitle);
-  return subTitle;
-};
-
 const createLastWattered = (text: string, card: HTMLDivElement) => {
   const info = document.createElement("p");
   info.classList.add("plant-cientific-name");
-  info.innerText = `Último riego: ${text}`;
+  info.innerText = `💧 Último riego: ${text}`;
   card.appendChild(info);
   return info;
 };
@@ -93,7 +85,7 @@ const createLastWattered = (text: string, card: HTMLDivElement) => {
 const createLastRepotted = (text: string, card: HTMLDivElement) => {
   const info = document.createElement("p");
   info.classList.add("plant-cientific-name");
-  info.innerText = `Último transplante: ${text}`;
+  info.innerText = `🪴 Último transplante: ${text}`;
   card.appendChild(info);
   return info;
 };
@@ -120,8 +112,7 @@ export const displayUserPlants = (
     );
     if (matchingPlant) {
       createImg(matchingPlant.imageUrl, divImg);
-      createTitle(userPlant.nickname, card);
-      createSubTitle(matchingPlant.name, card);
+      createTitle(matchingPlant.name, card);
       createLastWattered(userPlant.lastWatered, card);
       createLastRepotted(userPlant.lastRepotted, card);
     }

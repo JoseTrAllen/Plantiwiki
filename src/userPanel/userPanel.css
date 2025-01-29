@@ -56,7 +56,8 @@ main {
   width: 90dvw;
   padding: 20px;
   margin: auto;
-  background-color: #badbaba2;
+  margin-bottom: 40px;
+  background-color: #f5f5f54d;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 16px;
   border: none;
@@ -103,6 +104,10 @@ section {
   flex-direction: column;
   max-width: 300px;
   align-items: center;
+  padding: 6px;
+  gap: 5px;
+  border-radius: 16px;
+  background-color: #f5f5f52e;
 }
 
 .name-tip-flex h2 {
@@ -111,7 +116,7 @@ section {
 
 .name-tip-flex p {
   text-align: center;
-  color: var(--color-5);
+  color: var(--color-7);
 }
 
 .panel-section {
@@ -125,19 +130,26 @@ section {
 #plants-user-section {
   position: relative;
   display: grid;
-  justify-items: center;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-
+  padding: 30px 0px;
   margin: 0 auto;
 }
 
 .card-plant {
-  background-color: white;
+  background-color: #f0f8ffcf;
   padding: 10px 20px;
   border-radius: 16px;
   min-width: 350px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-plant:hover {
+  transform: scale(1.01);
 }
 
 .img-plant-container {
@@ -149,6 +161,12 @@ section {
 .card-plant img {
   width: 150px;
   border-radius: 8px;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.plant-name {
+  text-align: center;
+  color: var(--color-8);
 }
 
 /* Toogle section */
@@ -169,7 +187,7 @@ section {
   flex-direction: column;
   gap: 20px;
   position: absolute;
-  background-color: #153c2b;
+  background-color: whitesmoke;
   z-index: 1;
   padding: 20px;
   min-width: 500px;
@@ -185,4 +203,9 @@ section {
 .img-modal {
   width: 300px;
   border-radius: 16px;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.plant-modal-name {
+  text-align: center;
 }

@@ -8,7 +8,8 @@ import {
 import { fetchUsers } from "../api/usersApi";
 import { fetchPlants } from "../api/plantsApi";
 import { tip } from "./tips";
-import { getIdCard } from "./toogle";
+import { getIdCard } from "./uiModal";
+import { displayNone } from "./displayNone";
 
 const getUserFromURL = () => {
   const params = new URLSearchParams(window.location.search);
@@ -37,5 +38,13 @@ const loadUserData = async () => {
     }
   }
 };
+
+const wikiButton = document.getElementById("search-button");
+
+if (wikiButton && wikiButton instanceof HTMLParagraphElement) {
+  wikiButton.addEventListener("click", () => {
+    displayNone();
+  });
+}
 
 document.addEventListener("DOMContentLoaded", loadUserData);
