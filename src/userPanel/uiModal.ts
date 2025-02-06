@@ -24,8 +24,9 @@ export const getIdCard = (allPlants: Plant[]) => {
     const plantCard = target.closest(".card-plant");
     if (plantCard) {
       const plantId = plantCard.getAttribute("data-id");
-      console.log(plantId);
+
       displayModal();
+
       if (plantId) {
         setIdCard(plantId);
         const id = parseInt(plantId);

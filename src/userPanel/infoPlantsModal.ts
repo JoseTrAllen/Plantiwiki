@@ -1,3 +1,5 @@
+import { Plant } from "../model/model";
+
 export const setIdCard = (id: string) => {
   const card = document.querySelector(".modal-card");
   if (card) {

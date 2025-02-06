@@ -54,10 +54,11 @@ a {
 
 main {
   width: 90dvw;
-  padding: 20px;
+  padding: 10px;
   margin: auto;
   margin-bottom: 40px;
-  background-color: #f5f5f54d;
+  margin-top: 20px;
+  background-color: rgb(255 255 255 / 35%);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   border-radius: 16px;
   border: none;
@@ -74,7 +75,7 @@ section {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid var(--color-10);
+  border: 1px solid var(--color-10);
   object-fit: cover;
 }
 
@@ -131,19 +132,22 @@ section {
   position: relative;
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: calc(4 * 300px + 3 * 20px);
+  justify-items: center;
   padding: 30px 0px;
   margin: 0 auto;
 }
 
 .card-plant {
-  background-color: #f0f8ffcf;
+  background-color: #ffffffc7;
   padding: 10px 20px;
   border-radius: 16px;
-  min-width: 350px;
+  min-width: 300px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5px;
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
 }
@@ -158,7 +162,7 @@ section {
   align-items: center;
 }
 
-.card-plant img {
+.card-img {
   width: 150px;
   border-radius: 8px;
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
@@ -172,7 +176,8 @@ section {
 /* Toogle section */
 
 .toogle-card {
-  background-color: #06230992;
+  background-color: rgb(0 0 0 / 57%);
+  backdrop-filter: blur(9px) saturate(200%);
   display: none;
   justify-content: center;
   align-items: center;
@@ -208,4 +213,28 @@ section {
 
 .plant-modal-name {
   text-align: center;
+}
+
+/* Search section */
+
+.search-bar-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.all-plants-container {
+  position: relative;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  padding: 65px 0px;
+  margin: 0 auto;
+}
+
+.img-search-section {
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
 }

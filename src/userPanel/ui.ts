@@ -25,6 +25,17 @@ export const displayTips = (text: string) => {
   }
 };
 
+export const displayNumberOfPlants = (number: number) => {
+  const numberOfPlantsText = document.getElementById("number-of-plants");
+
+  if (numberOfPlantsText instanceof HTMLHeadingElement) {
+    numberOfPlantsText.innerText =
+      number >= 1
+        ? `¡Tienes ${number} plantitas que cuidar!`
+        : "Vaya, parece que a alguien le faltan plantitas...";
+  }
+};
+
 export const displayUserNamePlants = (plants: SavedPlant[]) => {
   const div = document.getElementById("user-container");
 
